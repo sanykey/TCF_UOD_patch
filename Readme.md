@@ -1,3 +1,3 @@
-*Tech Category Focus* mod for Stellaris
+*Tech Category Focus + UI Overhaul Dynamic* mod for Stellaris
 
-[Steam Workshop::Tech Category Focus](https://steamcommunity.com/sharedfiles/filedetails/?id=2981450111)
+[Steam Workshop::Tech Category Focus + UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=)

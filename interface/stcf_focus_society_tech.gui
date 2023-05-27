@@ -10,7 +10,7 @@ guiTypes = {
 		origo = left_up
 		moveable = no
 		size = { width = 282 height = 47 }
-		position = { x = 190 y = 62 }
+		position = { x = 215 y = 75 }
 
 		background = {
 			name = "background"
