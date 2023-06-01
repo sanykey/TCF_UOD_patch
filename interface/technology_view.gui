@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "technology_view_window"
-		size = { width = 565 height = 840 }
+		size = { width = 565 height = 940 }
 		show_position = { x = 35 y = 50 }
 		if_resolution = {
 			min_width = 2560
@@ -13,7 +13,7 @@ guiTypes = {
 		clipping = no
 		background = {
 			name = "background"
-			quadTextureSprite = "GFX_ui_tile_large_bg"
+			quadTextureSprite = "GFX_ui_tile_large_bg_plain"
 		}
 		iconType = {
 			name = "hex_bg"
@@ -32,11 +32,21 @@ guiTypes = {
 		}
 
 		# stcf buttons START
+		@stcf_btn_position_y = -2
+		@stcf_btn_physics_x = 400
+		@stcf_btn_society_x = 430
+		@stcf_btn_engineering_x = 460
+
+		@stcf_icon_position_y = 12
+		@stcf_icon_physics_pos_x = 413
+		@stcf_icon_society_pos_x = 443
+		@stcf_icon_engineering_pos_x = 473
+
 		# physics:
 		effectbuttonType = {
 			name = "stcf_focus_physics_tech"
 			quadTextureSprite = "GFX_category_materials"
-			position = { x = 333 y = 24 }
+			position = { x = @stcf_btn_physics_x y = @stcf_btn_position_y }
 			size = { x = 29 y = 29 }
 			effect = stcf_btn_open_focus_physics
 			oversound = "no_sound"
@@ -47,7 +57,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_physics_none_icon"
 			quadTextureSprite = "GFX_stcf_physics"
-			position = { x = 346 y = 38 }
+			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
 			scale = 1.5
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
@@ -58,7 +68,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_field_manipulation_icon"
 			quadTextureSprite = "GFX_stcf_field_manipulation"
-			position = { x = 346 y = 38 }
+			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			size = { x = 29 y = 29 }
 			alwaysTransparent = yes
@@ -69,7 +79,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_particles_icon"
 			quadTextureSprite = "GFX_stcf_particles"
-			position = { x = 346 y = 38 }
+			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			size = { x = 29 y = 29 }
 			alwaysTransparent = yes
@@ -80,7 +90,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_computing_icon"
 			quadTextureSprite = "GFX_stcf_computing"
-			position = { x = 346 y = 38 }
+			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			size = { x = 29 y = 29 }
 			alwaysTransparent = yes
@@ -92,7 +102,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_focus_society_tech"
 			quadTextureSprite = "GFX_stcf_society"
-			position = { x = 365 y = 24 }
+			position = { x = @stcf_btn_society_x y = @stcf_btn_position_y }
 			size = { x = 29 y = 29 }
 			effect = stcf_btn_open_focus_society
 			oversound = "no_sound"
@@ -105,7 +115,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_stcf_society"
 			scale = 1.5
 			alwaysTransparent = yes
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			size = { x = 29 y = 29 }
 			effect = stcf_society_none_icon_btn_effect
 			oversound = "no_sound"
@@ -115,7 +125,7 @@ guiTypes = {
 			name = "stcf_new_worlds_icon"
 			quadTextureSprite = "GFX_stcf_new_worlds"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_new_worlds_icon_btn_effect
@@ -126,7 +136,7 @@ guiTypes = {
 			name = "stcf_statecraft_icon"
 			quadTextureSprite = "GFX_stcf_statecraft"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_statecraft_icon_btn_effect
@@ -137,7 +147,7 @@ guiTypes = {
 			name = "stcf_biology_icon"
 			quadTextureSprite = "GFX_stcf_biology"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_biology_icon_btn_effect
@@ -148,7 +158,7 @@ guiTypes = {
 			name = "stcf_military_theory_icon"
 			quadTextureSprite = "GFX_stcf_military_theory"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_military_theory_icon_btn_effect
@@ -159,7 +169,7 @@ guiTypes = {
 			name = "stcf_archaeostudies_icon"
 			quadTextureSprite = "GFX_stcf_archaeostudies"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_archaeostudies_icon_btn_effect
@@ -170,7 +180,7 @@ guiTypes = {
 			name = "stcf_psionics_icon"
 			quadTextureSprite = "GFX_stcf_psionics"
 			scale = 0.9
-			position = { x = 378 y = 38 }
+			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_psionics_icon_btn_effect
@@ -178,12 +188,11 @@ guiTypes = {
 			clicksound = "select_click"
 		}
 
-
 		# engineering:
 		effectbuttonType = {
 			name = "stcf_focus_engineering_tech"
 			quadTextureSprite = "GFX_stcf_engineering"
-			position = { x = 397 y = 24 }
+			position = { x = @stcf_btn_engineering_x y = @stcf_btn_position_y }
 			size = { x = 29 y = 29 }
 			effect = stcf_btn_open_focus_engineering
 			oversound = "no_sound"
@@ -196,7 +205,7 @@ guiTypes = {
 			name = "stcf_engineering_none_icon"
 			quadTextureSprite = "GFX_stcf_engineering"
 			scale = 1.5
-			position = { x = 410 y = 38 }
+			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
 			effect = stcf_engineering_none_icon_btn_effect
@@ -206,7 +215,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_materials_icon"
 			quadTextureSprite = "GFX_stcf_materials"
-			position = { x = 410 y = 38 }
+			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
@@ -217,7 +226,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_propulsion_icon"
 			quadTextureSprite = "GFX_stcf_propulsion"
-			position = { x = 410 y = 38 }
+			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
@@ -228,7 +237,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_voidcraft_icon"
 			quadTextureSprite = "GFX_stcf_voidcraft"
-			position = { x = 410 y = 38 }
+			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
@@ -239,7 +248,7 @@ guiTypes = {
 		effectbuttonType = {
 			name = "stcf_industry_icon"
 			quadTextureSprite = "GFX_stcf_industry"
-			position = { x = 410 y = 38 }
+			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
 			scale = 0.9
 			alwaysTransparent = yes
 			size = { x = 29 y = 29 }
@@ -249,11 +258,10 @@ guiTypes = {
 		}
 		# stcf buttons END
 
-
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 16 }
+			position = { x = -45 y = 6 }
 			orientation = upper_right
 			shortcut = "ESCAPE"
 			clicksound = "back_click"
@@ -274,15 +282,18 @@ guiTypes = {
 			format = left
 			vertical_alignment = center
 		}
+		### HEAD OF RESEARCH ###
 		containerWindowType = {
 			name = "research_container"
-			position = { x = 20 y = 42 }
-			size = { width = 480 height = 175 }
+			position = { x = 12 y = 42 }
+			size = { width = -12 height = 220 }
 		}
 		containerWindowType = {
 			name = "areas_window"
-			size = { width = -7 height = -10 }
-			position = { x = 7 y = 175 }
+			size = { width = 550 height = 660 }
+			position = { x = 0 y = -10 }
+			orientation = center_down
+			origo = center_down
 			clipping = yes # no
 			verticalScrollbar = "right_vertical_slider_thick"
 			background = {
@@ -299,21 +310,27 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "researched"
-			quadTextureSprite = "GFX_button_116_24"
-			position = { x = -150 y = 120 }
+			quadTextureSprite = "GFX_ui_button_cyan"
+			position = { x = -130 y = 215 }
 			orientation = upper_right
-			font = "font_text_14"
-			text = "RESEARCHED"
+			size = { x = 120 y = 50 }
+			buttonFont = "font_text_14"
+			buttonText = "RESEARCHED"
+			borderSize = { x = 5 y = 0 }
+			multiline = yes
 			shortcut = "v"
 			pdx_tooltip = "RESEARCHED_TECHS"
 		}
 		buttonType = {
 			name = "techtree"
-			quadTextureSprite = "GFX_button_116_24"
-			position = { x = -150 y = 80 }
+			quadTextureSprite = "GFX_ui_button_cyan"
+			position = { x = -250 y = 215 }
 			orientation = upper_right
-			font = "font_text_14"
-			text = "UI_OVERHAUL_TECHTREE"
+			size = { x = 120 y = 50 }
+			buttonFont = "font_text_14"
+			borderSize = { x = 5 y = 0 }
+			multiline = yes
+			buttonText = "UI_OVERHAUL_TECHTREE"
 			pdx_tooltip = "UI_OVERHAUL_TECHTREE_TOOLTIP"
 			pdx_tooltip_delayed = "UI_OVERHAUL_TECHTREE_TOOLTIP_DELAYED"
 			web_link = "https://turanar.github.io/stellaris-tech-tree/vanilla/index.html"
@@ -321,7 +338,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "select_window"
 			size = { width = 565 height = 455 }
-			position = { x = 5 y = 9 }
+			position = { x = 5 y = 0 }
 			orientation = upper_right
 			containerWindowType = {
 				name = "reserached_tech_bg_box"
@@ -402,7 +419,7 @@ guiTypes = {
 				min_height = 1440
 				size = { width = 565 height = 1280 }
 			}
-			position = { x = 5 y = 9 }
+			position = { x = 5 y = 0 }
 			orientation = upper_right
 			background = {
 				name = "background"
