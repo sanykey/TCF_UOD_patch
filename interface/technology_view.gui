@@ -3,7 +3,7 @@ guiTypes = {
 		name = "technology_view_window"
 		size = { width = 565 height = 940 }
 		show_position = { x = 35 y = 50 }
-		if_resolution = {
+		if_scaled_resolution = {
 			min_width = 2560
 			show_position = { x = 55 y = 50 }
 		}
@@ -19,7 +19,7 @@ guiTypes = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
 			position = { x = 0 y = -12 }
-			if_resolution = {
+			if_scaled_resolution = {
 				min_width = 2560
 				position = { x = -10 y = -12 }
 			}
@@ -30,234 +30,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_line_medium"
 			position = { x = 6 y = 21 }
 		}
-
-		# stcf buttons START
-		@stcf_btn_position_y = -2
-		@stcf_btn_physics_x = 400
-		@stcf_btn_society_x = 430
-		@stcf_btn_engineering_x = 460
-
-		@stcf_icon_position_y = 12
-		@stcf_icon_physics_pos_x = 413
-		@stcf_icon_society_pos_x = 443
-		@stcf_icon_engineering_pos_x = 473
-
-		# physics:
-		effectbuttonType = {
-			name = "stcf_focus_physics_tech"
-			quadTextureSprite = "GFX_category_materials"
-			position = { x = @stcf_btn_physics_x y = @stcf_btn_position_y }
-			size = { x = 29 y = 29 }
-			effect = stcf_btn_open_focus_physics
-			oversound = "no_sound"
-			clicksound = "select_click"
-			spriteType = "GFX_button_29_animated"
-			font = "malgun_goth_24"
-		}
-		effectbuttonType = {
-			name = "stcf_physics_none_icon"
-			quadTextureSprite = "GFX_stcf_physics"
-			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
-			scale = 1.5
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_physics_none_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "no_sound"
-		}
-		effectbuttonType = {
-			name = "stcf_field_manipulation_icon"
-			quadTextureSprite = "GFX_stcf_field_manipulation"
-			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			size = { x = 29 y = 29 }
-			alwaysTransparent = yes
-			effect = stcf_field_manipulation_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "no_sound"
-		}
-		effectbuttonType = {
-			name = "stcf_particles_icon"
-			quadTextureSprite = "GFX_stcf_particles"
-			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			size = { x = 29 y = 29 }
-			alwaysTransparent = yes
-			effect = stcf_particles_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "no_sound"
-		}
-		effectbuttonType = {
-			name = "stcf_computing_icon"
-			quadTextureSprite = "GFX_stcf_computing"
-			position = { x = @stcf_icon_physics_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			size = { x = 29 y = 29 }
-			alwaysTransparent = yes
-			effect = stcf_computing_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "no_sound"
-		}
-		# society:
-		effectbuttonType = {
-			name = "stcf_focus_society_tech"
-			quadTextureSprite = "GFX_stcf_society"
-			position = { x = @stcf_btn_society_x y = @stcf_btn_position_y }
-			size = { x = 29 y = 29 }
-			effect = stcf_btn_open_focus_society
-			oversound = "no_sound"
-			clicksound = "select_click"
-			spriteType = "GFX_button_29_animated"
-			font = "malgun_goth_24"
-		}
-		effectbuttonType = {
-			name = "stcf_society_none_icon"
-			quadTextureSprite = "GFX_stcf_society"
-			scale = 1.5
-			alwaysTransparent = yes
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			size = { x = 29 y = 29 }
-			effect = stcf_society_none_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_new_worlds_icon"
-			quadTextureSprite = "GFX_stcf_new_worlds"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_new_worlds_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_statecraft_icon"
-			quadTextureSprite = "GFX_stcf_statecraft"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_statecraft_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_biology_icon"
-			quadTextureSprite = "GFX_stcf_biology"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_biology_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_military_theory_icon"
-			quadTextureSprite = "GFX_stcf_military_theory"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_military_theory_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_archaeostudies_icon"
-			quadTextureSprite = "GFX_stcf_archaeostudies"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_archaeostudies_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_psionics_icon"
-			quadTextureSprite = "GFX_stcf_psionics"
-			scale = 0.9
-			position = { x = @stcf_icon_society_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_psionics_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-
-		# engineering:
-		effectbuttonType = {
-			name = "stcf_focus_engineering_tech"
-			quadTextureSprite = "GFX_stcf_engineering"
-			position = { x = @stcf_btn_engineering_x y = @stcf_btn_position_y }
-			size = { x = 29 y = 29 }
-			effect = stcf_btn_open_focus_engineering
-			oversound = "no_sound"
-			clicksound = "select_click"
-			spriteType = "GFX_button_29_animated"
-			font = "malgun_goth_24"
-		}
-		#engineering icons:
-		effectbuttonType = {
-			name = "stcf_engineering_none_icon"
-			quadTextureSprite = "GFX_stcf_engineering"
-			scale = 1.5
-			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_engineering_none_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_materials_icon"
-			quadTextureSprite = "GFX_stcf_materials"
-			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_materials_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_propulsion_icon"
-			quadTextureSprite = "GFX_stcf_propulsion"
-			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_propulsion_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_voidcraft_icon"
-			quadTextureSprite = "GFX_stcf_voidcraft"
-			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_voidcraft_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		effectbuttonType = {
-			name = "stcf_industry_icon"
-			quadTextureSprite = "GFX_stcf_industry"
-			position = { x = @stcf_icon_engineering_pos_x y = @stcf_icon_position_y }
-			scale = 0.9
-			alwaysTransparent = yes
-			size = { x = 29 y = 29 }
-			effect = stcf_industry_icon_btn_effect
-			oversound = "no_sound"
-			clicksound = "select_click"
-		}
-		# stcf buttons END
-
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
@@ -272,7 +44,7 @@ guiTypes = {
 			font = "font_header_20"
 			text = "TECHNOLOGY"
 			position = { x = 35 y = 2 }
-			if_resolution = {
+			if_scaled_resolution = {
 				min_width = 2560
 				position = { x = 25 y = 2 }
 			}
@@ -308,6 +80,207 @@ guiTypes = {
 				format = UPPER_LEFT
 			}
 		}
+
+		# stcf buttons START
+		@stcf_main_tech_icon_y_pos = 15
+		@stcf_main_tech_icon_physics_x_pos = 425
+		@stcf_main_tech_icon_society_x_pos = 450
+		@stcf_main_tech_icon_engineering_x_pos = 475
+		@stcf_main_tech_icon_size = 29
+		@stcf_main_tech_icon_scale = 0.7
+		@stcf_main_tech_icon_empty_scale = 1.2
+		# physics:
+		effectbuttonType = {
+			name = "stcf_btn_open_focus"
+			position = { x = 410 y = 1 }
+			size = { x = 34 y = 110 }
+			effect = stcf_btn_open_focus
+			oversound = "no_sound"
+			clicksound = "select_click"
+			spriteType = "GFX_button_animated_75_24"
+			font = "malgun_goth_24"
+		}
+		effectbuttonType = {
+			name = "stcf_physics_none_icon"
+			quadTextureSprite = "GFX_stcf_physics"
+			position = { x = @stcf_main_tech_icon_physics_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_empty_scale
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_physics_none_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "no_sound"
+		}
+		effectbuttonType = {
+			name = "stcf_field_manipulation_icon"
+			quadTextureSprite = "GFX_stcf_field_manipulation"
+			position = { x = @stcf_main_tech_icon_physics_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			alwaysTransparent = yes
+			effect = stcf_field_manipulation_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "no_sound"
+		}
+		effectbuttonType = {
+			name = "stcf_particles_icon"
+			quadTextureSprite = "GFX_stcf_particles"
+			position = { x = @stcf_main_tech_icon_physics_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			alwaysTransparent = yes
+			effect = stcf_particles_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "no_sound"
+		}
+		effectbuttonType = {
+			name = "stcf_computing_icon"
+			quadTextureSprite = "GFX_stcf_computing"
+			position = { x = @stcf_main_tech_icon_physics_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			alwaysTransparent = yes
+			effect = stcf_computing_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "no_sound"
+		}
+		# society:
+		effectbuttonType = {
+			name = "stcf_society_none_icon"
+			quadTextureSprite = "GFX_stcf_society"
+			scale = @stcf_main_tech_icon_empty_scale
+			alwaysTransparent = yes
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_society_none_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_new_worlds_icon"
+			quadTextureSprite = "GFX_stcf_new_worlds"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_new_worlds_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_statecraft_icon"
+			quadTextureSprite = "GFX_stcf_statecraft"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_statecraft_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_biology_icon"
+			quadTextureSprite = "GFX_stcf_biology"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_biology_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_military_theory_icon"
+			quadTextureSprite = "GFX_stcf_military_theory"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_military_theory_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_archaeostudies_icon"
+			quadTextureSprite = "GFX_stcf_archaeostudies"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_archaeostudies_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_psionics_icon"
+			quadTextureSprite = "GFX_stcf_psionics"
+			scale = @stcf_main_tech_icon_scale
+			position = { x = @stcf_main_tech_icon_society_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_psionics_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		# engineering:
+		effectbuttonType = {
+			name = "stcf_engineering_none_icon"
+			quadTextureSprite = "GFX_stcf_engineering"
+			scale = @stcf_main_tech_icon_empty_scale
+			position = { x = @stcf_main_tech_icon_engineering_x_pos y = @stcf_main_tech_icon_y_pos }
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_engineering_none_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_materials_icon"
+			quadTextureSprite = "GFX_stcf_materials"
+			position = { x = @stcf_main_tech_icon_engineering_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_materials_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_propulsion_icon"
+			quadTextureSprite = "GFX_stcf_propulsion"
+			position = { x = @stcf_main_tech_icon_engineering_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_propulsion_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_voidcraft_icon"
+			quadTextureSprite = "GFX_stcf_voidcraft"
+			position = { x = @stcf_main_tech_icon_engineering_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_voidcraft_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		effectbuttonType = {
+			name = "stcf_industry_icon"
+			quadTextureSprite = "GFX_stcf_industry"
+			position = { x = @stcf_main_tech_icon_engineering_x_pos y = @stcf_main_tech_icon_y_pos }
+			scale = @stcf_main_tech_icon_scale
+			alwaysTransparent = yes
+			size = { x = @stcf_main_tech_icon_size y = @stcf_main_tech_icon_size }
+			effect = stcf_industry_icon_btn_effect
+			oversound = "no_sound"
+			clicksound = "select_click"
+		}
+		# stcf buttons END
+
+
 		buttonType = {
 			name = "researched"
 			quadTextureSprite = "GFX_ui_button_cyan"
@@ -342,7 +315,7 @@ guiTypes = {
 			orientation = upper_right
 			containerWindowType = {
 				name = "reserached_tech_bg_box"
-				size = { width = 100% height = 125 }
+				size = { width = 100% height = 145 }
 				background = {
 					name = "reserached_tech_bg"
 					spriteType = "GFX_ui_plain_bg_tile"
@@ -358,50 +331,56 @@ guiTypes = {
 				pdx_tooltip = "CLOSE_TITLE"
 			}
 			iconType = {
-				name = "hex_bg"
-				spriteType = "GFX_hex_bg"
-				position = { x = -10 y = -14 }
+				name = "title_hex"
+				spriteType = "GFX_hex_center_bg"
+				position = { x = 0 y = 18 }
+				orientation = center_up
+				centerPosition = yes
 				alwaysTransparent = yes
 			}
 			iconType = {
-				name = "header_line"
-				quadTextureSprite = "GFX_line_long"
-				position = { x = 6 y = 22 }
+				name = "title_line"
+				spriteType = "GFX_line_center"
+				position = { x = 0 y = 36 }
+				orientation = center_up
+				centerPosition = yes
 				alwaysTransparent = yes
 			}
 			instantTextBoxType = {
 				name = "header"
 				font = "font_header_20"
 				text = "SELECT_TECHNOLOGY"
-				position = { x = 19 y = 5 }
-				maxWidth = 400
+				position = { x = -250 y = 5 }
+				orientation = center_up
+				maxWidth = 500
 				maxHeight = 24
 				fixedSize = yes
-				format = left
+				format = center
+				alwaysTransparent = yes
 			}
 			instantTextBoxType = {
 				name = "desc"
 				font = "font_text_16"
 				text = "SELECT_TECHNOLOGY_DESC"
-				position = { x = -270 y = 34 }
+				position = { x = -270 y = 45 }
 				orientation = center_up
 				maxWidth = 540
-				maxHeight = 85
+				maxHeight = 95
 				fixedSize = yes
 				format = center
-				vertical_alignment = bottom
+				vertical_alignment = center
 			}
 			smoothListBoxType = {
 				name = "list"
-				position = { x = 5 y = 130 }
+				position = { x = 5 y = 150 }
 				size = { x = 566 y = 796 }
-				if_resolution = {
+				if_scaled_resolution = {
 					min_height = 1200
-					size = { x = 566 y = 910 }
+					size = { x = 566 y = 916 }
 				}
-				if_resolution = {
+				if_scaled_resolution = {
 					min_height = 1440
-					size = { x = 566 y = 1135 }
+					size = { x = 566 y = 1156 }
 				}
 				scrollbarType = "standardlistbox_slider_thick"
 				spacing = 5
@@ -410,14 +389,14 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "researched_window"
-			size = { width = 565 height = 920 }
-			if_resolution = {
+			size = { width = 565 height = 940 }
+			if_scaled_resolution = {
 				min_height = 1200
-				size = { width = 565 height = 1040 }
+				size = { width = 565 height = 1060 }
 			}
-			if_resolution = {
+			if_scaled_resolution = {
 				min_height = 1440
-				size = { width = 565 height = 1280 }
+				size = { width = 565 height = 1300 }
 			}
 			position = { x = 5 y = 0 }
 			orientation = upper_right
@@ -465,14 +444,14 @@ guiTypes = {
 			smoothListBoxType = {
 				name = "list"
 				position = { x = 10 y = 88 }
-				size = { x = 535 y = 820 }
-				if_resolution = {
+				size = { x = 535 y = 840 }
+				if_scaled_resolution = {
 					min_height = 1200
-					size = { x = 535 y = 940 }
+					size = { x = 535 y = 960 }
 				}
-				if_resolution = {
+				if_scaled_resolution = {
 					min_height = 1440
-					size = { x = 535 y = 1180 }
+					size = { x = 535 y = 1200 }
 				}
 				borderSize = { x = 0 y = 0 }
 				scrollbarType = "standardlistbox_slider_thick"
@@ -739,7 +718,7 @@ guiTypes = {
 				name = "progress_value"
 				font = "font_text_14"
 				text = ""
-				position = { x = -175 y = 41 }
+				position = { x = -180 y = 41 }
 				orientation = upper_right
 				maxWidth = 160
 				maxHeight = 20
@@ -1078,7 +1057,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "technology_researched_dialog_window"
-		size = { width = 644 height = 330 }
+		size = { width = 590 height = 330 }
 		position = { x = 0 y = 0 }
 		orientation = center
 		origo = center
@@ -1088,19 +1067,42 @@ guiTypes = {
 		fade_type = smoothstep
 		background = {
 			name = "background"
-			quadTextureSprite = "GFX_tile_outliner_bg"
+			quadTextureSprite = "GFX_tile_center_bg"
+		}
+		# title
+		iconType = {
+			name = "hex_bg_left"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = -79 y = 22 }
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
 		}
 		iconType = {
-			name = "hex_bg"
-			spriteType = "GFX_hex_bg"
-			position = { x = -10 y = -16 }
+			name = "hex_bg_right"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = 79 y = 22 }
+			orientation = center_up
+			centerPosition = yes
 			alwaysTransparent = yes
 		}
 		iconType = {
 			name = "header_line"
-			quadTextureSprite = "GFX_line_long"
-			position = { x = 6 y = 21 }
+			spriteType = "GFX_line_center"
+			position = { x = 0 y = 42 }
+			orientation = center_up
+			centerPosition = yes
 			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "header"
+			font = "font_header_20"
+			text = "RESEARCH_FINISHED_TITLE"
+			position = { x = -275 y = 9 }
+			orientation = center_up
+			maxWidth = 550
+			maxHeight = 20
+			format = center
 		}
 		buttonType = {
 			name = "close"
@@ -1111,20 +1113,10 @@ guiTypes = {
 			clicksound = "back_click"
 			pdx_tooltip = "CLOSE_TITLE"
 		}
-		instantTextBoxType = {
-			name = "header"
-			font = "font_header_20"
-			text = "RESEARCH_FINISHED_TITLE"
-			position = { x = 20 y = 4 }
-			maxWidth = 300
-			maxHeight = 20
-			fixedSize = yes
-			format = left
-		}
 		containerWindowType = {
 			name = "bg_frame_box"
-			size = { width = 570 height = 200 }
-			position = { x = 37 y = 60 }
+			size = { width = -15 height = 200 }
+			position = { x = 15 y = 60 }
 			background = {
 				name = "bg_frame"
 				spriteType = "GFX_clean_frame_area"
@@ -1133,7 +1125,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "background"
 			size = { width = 465 height = -166 } # 60
-			position = { x = 122 y = 104 }
+			position = { x = 95 y = 104 }
 			background = {
 				name = "background"
 				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
@@ -1143,18 +1135,18 @@ guiTypes = {
 		iconType = {
 			name = "tech_option_bg"
 			spriteType = "GFX_tech_entry_physics_bg"
-			position = { x = 57 y = 79 }
+			position = { x = 30 y = 79 }
 			alwaysTransparent = yes
 		}
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_technology_unknown"
-			position = { x = 61 y = 106 }
+			position = { x = 34 y = 106 }
 		}
 		containerWindowType = {
 			name = "icon_frame_box"
 			size = { width = 54 height = 54 }
-			position = { x = 60 y = 106 }
+			position = { x = 33 y = 106 }
 			background = {
 				name = "icon_frame"
 				spriteType = "GFX_plain_green_frame_tile"
@@ -1164,14 +1156,13 @@ guiTypes = {
 		iconType = {
 			name = "category_icon"
 			spriteType = "GFX_traits"
-			position = { x = 551 y = 111 }
-			scale = 1.1
+			position = { x = 526 y = 109 }
 		}
 		instantTextBoxType = {
 			name = "name"
 			font = "font_text_14"
 			text = "Tech name"
-			position = { x = 65 y = 81 }
+			position = { x = 36 y = 81 }
 			maxWidth = 380
 			maxHeight = 20
 			fixedSize = yes
@@ -1182,7 +1173,7 @@ guiTypes = {
 			name = "cost"
 			font = "font_text_14"
 			text = ""
-			position = { x = 476 y = 81 }
+			position = { x = 451 y = 81 }
 			maxWidth = 100
 			maxHeight = 20
 			fixedSize = yes
@@ -1192,7 +1183,7 @@ guiTypes = {
 		}
 		smoothListBoxType = {
 			name = "unlocks"
-			position = { x = 127 y = 108 }
+			position = { x = 100 y = 106 }
 			size = { x = 420 y = 54 }
 			spacing = 1
 			scrollbarType = "standardlistbox_slider_thick_small"
@@ -1202,7 +1193,7 @@ guiTypes = {
 			name = "researched_desc"
 			font = "font_text_14"
 			text = ""
-			position = { x = 57 y = 171 }
+			position = { x = 30 y = 171 }
 			maxWidth = 530
 			maxHeight = 77
 			format = left
@@ -1211,20 +1202,20 @@ guiTypes = {
 		}
 		buttonType =	{
 			name = "close_button"
-			quadTextureSprite = "GFX_standard_button_200_34_button"
-			position = { x = 29 y = -60 }
-			text = "CLOSE"
-			buttonFont = "font_text_14"
+			quadTextureSprite = "GFX_standard_button_230_34_button"
+			position = { x = 10 y = -60 }
 			orientation = lower_left
+			buttonText = "CLOSE"
+			buttonFont = "font_text_14"
 			pdx_tooltip = "CLOSE_TITLE"
 		}
 		buttonType =	{
 			name = "new_research"
-			quadTextureSprite = "GFX_standard_button_200_34_button"
-			position = { x = -253 y = -60 }
-			text = "TECH_NEW_RESEARCH"
-			buttonFont = "font_text_14"
+			quadTextureSprite = "GFX_standard_button_230_34_button"
+			position = { x = -263 y = -60 }
 			orientation = lower_right
+			buttonText = "TECH_NEW_RESEARCH"
+			buttonFont = "font_text_14"
 		}
 	}
 }
